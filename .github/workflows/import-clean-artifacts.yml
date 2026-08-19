@@ -1,0 +1,94 @@
+name: Import verified clean artifact package
+
+on:
+  push:
+    paths:
+      - 'requirements-uml-traceability-artifacts.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify uploaded archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f requirements-uml-traceability-artifacts.zip
+          echo 'e1e7ff7327c43de246ead5913f83239c2e98cf3409b71f2a2b0d5dc9a959640f  requirements-uml-traceability-artifacts.zip' | sha256sum -c -
+
+      - name: Materialize artifact-only repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/clean-artifacts
+          mkdir -p /tmp/clean-artifacts
+          unzip -q requirements-uml-traceability-artifacts.zip -d /tmp/clean-artifacts
+          src=/tmp/clean-artifacts/requirements-uml-traceability-artifacts
+          test -d "$src"
+          cp -a "$src"/. .
+          rm -f requirements-uml-traceability-artifacts.zip
+
+      - name: Fail-closed publication and provenance audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -e article
+          test ! -e SoSyM_article_sources.zip
+          test ! -e artifacts/publication_package
+          test ! -e submission
+          test ! -e reports
+          test ! -e manuscript_support
+          test ! -e input_snapshot/raw
+          test -f derived/behaviors/source_without_legacy_semantics.csv
+          test -f derived/behaviors/primary_semantic_queries.csv
+          test -f HISTORICAL_SOURCE_PROVENANCE.md
+          test -f artifacts/provenance/historical_reconstruction_audit.json
+          test "$(find historical_generation/json -maxdepth 1 -name '*.json' | wc -l)" -eq 90
+          test "$(find historical_generation/puml -maxdepth 1 -name '*.puml' ! -name 'methodless.puml' | wc -l)" -eq 90
+          test -f historical_generation/puml/methodless.puml
+          python - <<'PY'
+          import csv, json
+          from pathlib import Path
+          with Path('derived/behaviors/source_without_legacy_semantics.csv').open(newline='', encoding='utf-8') as f:
+              r=csv.reader(f); header=next(r); rows=sum(1 for _ in r)
+          assert rows == 3373
+          assert header == ['Model','Run','File','Class','MethodName','Signature','Has_UC_Annotation','UC_References','UC_Action']
+          assert 'Best_Match_Action' not in header and 'SimilarityScore' not in header
+          with Path('derived/behaviors/primary_semantic_queries.csv').open(newline='', encoding='utf-8') as f:
+              assert sum(1 for _ in csv.reader(f)) - 1 == 2369
+          a=json.loads(Path('artifacts/provenance/historical_reconstruction_audit.json').read_text(encoding='utf-8'))
+          assert a['native_exact_row_multiset_match'] is False
+          assert a['row_multiset_match_after_documented_encoding_normalization'] is True
+          assert a['encoding_artifact_rows'] == 1
+          assert a['encoding_artifact_field'] == 'UC_Action'
+          assert a['legacy_semantic_columns_reconstructed'] is False
+          wl=json.loads(Path('PUBLIC_WHITELIST.json').read_text(encoding='utf-8'))
+          assert wl['publication_policy']['artifact_only_repository'] is True
+          assert wl['publication_policy']['journal_specific_manuscript_files_included'] is False
+          assert wl['publication_policy']['superseded_article_versions_included'] is False
+          print('Fail-closed artifact audit PASS')
+          PY
+          sha256sum -c CHECKSUMS.sha256
+          ! grep -RIlE 'SOSYM_MAIN|sn-jnl|SoSyM_article_sources' README.md REPRODUCIBILITY.md PUBLIC_WHITELIST.json LICENSE_SCOPE.md
+
+      - name: Commit verified clean state
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No materialized changes to commit'
+          else
+            git commit -m 'Materialize verified artifact-only release [skip import]'
+            git push
+          fi
