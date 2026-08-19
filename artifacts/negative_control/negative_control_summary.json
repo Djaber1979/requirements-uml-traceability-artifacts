@@ -1,0 +1,90 @@
+{
+  "boundaries": {
+    "UC_Action_used": false,
+    "embedding_model_loaded": false,
+    "expert_or_llm_judge_used": false,
+    "legacy_semantic_fields_used": false,
+    "new_semantic_retrieval_run": false,
+    "p_values_reported": false,
+    "semantic_correctness_claimed": false,
+    "tfidf_refit": false
+  },
+  "design": {
+    "aggregation": "query -> Model\u00d7Run cell -> equal-cell macro across 69 cells",
+    "candidate_uc_count": 21,
+    "eligible_model_run_cells": 69,
+    "permutations": 2000,
+    "primary_queries": 2369,
+    "schedule_shared_across_methods": true,
+    "score_matrices_reused_without_refit_or_rescoring": true,
+    "seed": 20260818,
+    "tie_break": "ascending numeric assigned UC label after descending similarity",
+    "zero_query_cells_excluded_as_NA": 21
+  },
+  "inputs": {
+    "mpnet_scores_sha256": "ce09aaadccd45d6d9c6c1aae56cdd60f36b5e7c21c5c1b014d0a06683e816548",
+    "permutation_schedule_sha256": "493fd1edb352df9a2245688dc8f973e44fe7c62dc3bc4be11c83283f70104f98",
+    "prompt4_observed_metrics_sha256": "8f3f03764d21383ba03c68548b19bbe736e008c9423270579df0a1842f639f7a",
+    "queries_sha256": "a5a81baa73308516ac210b40079392b76b6b63233495af23d8055b42a56ae7c8",
+    "tfidf_scores_sha256": "ec1a2a832994cd95bbc08e6937ad79e9cc74ddfbc27721c417879fe2d948aa2c"
+  },
+  "results": {
+    "MPNET": {
+      "Hit1": {
+        "central_95_perturbation_range": [
+          0.0013032989002724723,
+          0.1704849987220605
+        ],
+        "count_ge_observed": 0,
+        "empirical_percentile_le_observed": 1.0,
+        "observed": 0.6331853250339536,
+        "observed_minus_permutation_median": 0.5996585161865351,
+        "permutation_max": 0.26154967257286776,
+        "permutation_median": 0.03352680884741849,
+        "permutation_min": 0.0
+      },
+      "MRR": {
+        "central_95_perturbation_range": [
+          0.09876025083516018,
+          0.2882271043034333
+        ],
+        "count_ge_observed": 0,
+        "empirical_percentile_le_observed": 1.0,
+        "observed": 0.722851659313454,
+        "observed_minus_permutation_median": 0.5580433410344195,
+        "permutation_max": 0.3798426657682756,
+        "permutation_median": 0.16480831827903442,
+        "permutation_min": 0.06948647063437743
+      }
+    },
+    "TFIDF": {
+      "Hit1": {
+        "central_95_perturbation_range": [
+          0.0046954065657197905,
+          0.1511521632193025
+        ],
+        "count_ge_observed": 0,
+        "empirical_percentile_le_observed": 1.0,
+        "observed": 0.5587447835273326,
+        "observed_minus_permutation_median": 0.5175809656398547,
+        "permutation_max": 0.2855220551524743,
+        "permutation_median": 0.041163817887477874,
+        "permutation_min": 0.003254728759396482
+      },
+      "MRR": {
+        "central_95_perturbation_range": [
+          0.10781285229298623,
+          0.27916675160153215
+        ],
+        "count_ge_observed": 0,
+        "empirical_percentile_le_observed": 1.0,
+        "observed": 0.675956689796671,
+        "observed_minus_permutation_median": 0.5064545049073503,
+        "permutation_max": 0.40058330590918734,
+        "permutation_median": 0.16950218488932067,
+        "permutation_min": 0.0910269290472934
+      }
+    }
+  },
+  "status": "PASS_PENDING_VALIDATOR"
+}

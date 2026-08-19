@@ -1,0 +1,11 @@
+State,Count,RateOfAllRows
+all_rows,3373,1.0
+annotation_present,2442,0.7239845834568633
+valid_uc_reference,2408,0.713904536021346
+invalid_uc_reference,34,0.010080047435517344
+action_text_present,1800,0.5336495701156241
+complete_explicit_trace,1771,0.5250518825970946
+reference_only_trace,637,0.18885265342425142
+off_scaffold,26,0.007708271568336793
+exact_duplicate_excess_rows,16,0.004743551734361103
+primary_semantic_queries,2369,0.7023421286688408

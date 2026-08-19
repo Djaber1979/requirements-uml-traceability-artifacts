@@ -1,0 +1,984 @@
+{
+  "format": 1,
+  "construction": "explicit-whitelist-only",
+  "public_directory": "requirements-uml-traceability-artifacts",
+  "copied_files": [
+    {
+      "source": "artifacts/negative_control/negative_control_summary.json",
+      "destination": "artifacts/negative_control/negative_control_summary.json"
+    },
+    {
+      "source": "artifacts/negative_control/permutation_distribution.csv",
+      "destination": "artifacts/negative_control/permutation_distribution.csv"
+    },
+    {
+      "source": "artifacts/negative_control/permutation_schedule.csv",
+      "destination": "artifacts/negative_control/permutation_schedule.csv"
+    },
+    {
+      "source": "artifacts/protocol_freeze/primary_population_audit.json",
+      "destination": "artifacts/protocol_freeze/primary_population_audit.json"
+    },
+    {
+      "source": "artifacts/rq3_stability_fragmentation/model_uc_stability_fragmentation.csv",
+      "destination": "artifacts/rq3_stability_fragmentation/model_uc_stability_fragmentation.csv"
+    },
+    {
+      "source": "artifacts/rq3_stability_fragmentation/rq3_summary.json",
+      "destination": "artifacts/rq3_stability_fragmentation/rq3_summary.json"
+    },
+    {
+      "source": "artifacts/rq3_stability_fragmentation/uc_fragmentation_cross_model_summary.csv",
+      "destination": "artifacts/rq3_stability_fragmentation/uc_fragmentation_cross_model_summary.csv"
+    },
+    {
+      "source": "artifacts/run_resampling/by_model_summary.csv",
+      "destination": "artifacts/run_resampling/by_model_summary.csv"
+    },
+    {
+      "source": "artifacts/run_resampling/coverage_summary.json",
+      "destination": "artifacts/run_resampling/coverage_summary.json"
+    },
+    {
+      "source": "artifacts/run_resampling/overall_summary.csv",
+      "destination": "artifacts/run_resampling/overall_summary.csv"
+    },
+    {
+      "source": "artifacts/semantic_retrieval/corpus_primary_metrics.json",
+      "destination": "artifacts/semantic_retrieval/corpus_primary_metrics.json"
+    },
+    {
+      "source": "artifacts/semantic_retrieval/cross_method_corpus_consensus.json",
+      "destination": "artifacts/semantic_retrieval/cross_method_corpus_consensus.json"
+    },
+    {
+      "source": "artifacts/semantic_retrieval/model_run_primary_metrics.csv",
+      "destination": "artifacts/semantic_retrieval/model_run_primary_metrics.csv"
+    },
+    {
+      "source": "artifacts/semantic_retrieval/runtime_manifest.json",
+      "destination": "artifacts/semantic_retrieval/runtime_manifest.json"
+    },
+    {
+      "source": "artifacts/semantic_sensitivities/runtime_manifest.json",
+      "destination": "artifacts/semantic_sensitivities/runtime_manifest.json"
+    },
+    {
+      "source": "artifacts/semantic_sensitivities/sensitivity_summary.csv",
+      "destination": "artifacts/semantic_sensitivities/sensitivity_summary.csv"
+    },
+    {
+      "source": "artifacts/semantic_sensitivities/sensitivity_summary.json",
+      "destination": "artifacts/semantic_sensitivities/sensitivity_summary.json"
+    },
+    {
+      "source": "artifacts/structural_rq1/corpus_structural_summary.json",
+      "destination": "artifacts/structural_rq1/corpus_structural_summary.json"
+    },
+    {
+      "source": "artifacts/structural_rq1/model_structural_summary.csv",
+      "destination": "artifacts/structural_rq1/model_structural_summary.csv"
+    },
+    {
+      "source": "artifacts/structural_rq1/row_state_counts.csv",
+      "destination": "artifacts/structural_rq1/row_state_counts.csv"
+    },
+    {
+      "source": "artifacts/structural_rq1/structural_funnel.csv",
+      "destination": "artifacts/structural_rq1/structural_funnel.csv"
+    },
+    {
+      "source": "config/excluded_fields.yaml",
+      "destination": "config/excluded_fields.yaml"
+    },
+    {
+      "source": "config/preprocessing.yaml",
+      "destination": "config/preprocessing.yaml"
+    },
+    {
+      "source": "config/retrieval_rules.yaml",
+      "destination": "config/retrieval_rules.yaml"
+    },
+    {
+      "source": "config/robustness.yaml",
+      "destination": "config/robustness.yaml"
+    },
+    {
+      "source": "config/semantic_models.yaml",
+      "destination": "config/semantic_models.yaml"
+    },
+    {
+      "source": "derived/behaviors/CLEAN_COPY_MANIFEST.json",
+      "destination": "derived/behaviors/CLEAN_COPY_MANIFEST.json"
+    },
+    {
+      "source": "derived/behaviors/primary_semantic_queries.csv",
+      "destination": "derived/behaviors/primary_semantic_queries.csv"
+    },
+    {
+      "source": "derived/behaviors/source_without_legacy_semantics.csv",
+      "destination": "derived/behaviors/source_without_legacy_semantics.csv"
+    },
+    {
+      "source": "derived/requirements/requirements_primary.csv",
+      "destination": "derived/requirements/requirements_primary.csv"
+    },
+    {
+      "source": "input_snapshot/provenance/Methodless.txt",
+      "destination": "input_snapshot/provenance/Methodless.txt"
+    },
+    {
+      "source": "input_snapshot/provenance/UCs.txt",
+      "destination": "input_snapshot/provenance/UCs.txt"
+    },
+    {
+      "source": "input_snapshot/provenance/index_expected.csv",
+      "destination": "input_snapshot/provenance/index_expected.csv"
+    },
+    {
+      "source": "scripts/04_primary_semantic_retrieval.py",
+      "destination": "scripts/04_primary_semantic_retrieval.py"
+    },
+    {
+      "source": "scripts/04_validate_primary_semantic_retrieval.py",
+      "destination": "scripts/04_validate_primary_semantic_retrieval.py"
+    },
+    {
+      "source": "scripts/05_structural_traceability_rq1.py",
+      "destination": "scripts/05_structural_traceability_rq1.py"
+    },
+    {
+      "source": "scripts/05_validate_structural_traceability_rq1.py",
+      "destination": "scripts/05_validate_structural_traceability_rq1.py"
+    },
+    {
+      "source": "scripts/06_rq3_stability_fragmentation.py",
+      "destination": "scripts/06_rq3_stability_fragmentation.py"
+    },
+    {
+      "source": "scripts/06_validate_rq3_stability_fragmentation.py",
+      "destination": "scripts/06_validate_rq3_stability_fragmentation.py"
+    },
+    {
+      "source": "scripts/07_negative_control.py",
+      "destination": "scripts/07_negative_control.py"
+    },
+    {
+      "source": "scripts/07_validate_negative_control.py",
+      "destination": "scripts/07_validate_negative_control.py"
+    },
+    {
+      "source": "scripts/08_semantic_sensitivities.py",
+      "destination": "scripts/08_semantic_sensitivities.py"
+    },
+    {
+      "source": "scripts/08_validate_semantic_sensitivities.py",
+      "destination": "scripts/08_validate_semantic_sensitivities.py"
+    },
+    {
+      "source": "scripts/09_run_resampling.py",
+      "destination": "scripts/09_run_resampling.py"
+    },
+    {
+      "source": "scripts/09_validate_run_resampling.py",
+      "destination": "scripts/09_validate_run_resampling.py"
+    }
+  ],
+  "generated_files": [
+    "ANALYSIS_SPECIFICATION.md",
+    "CITATION.cff",
+    "DATA_PREPARATION.md",
+    "HISTORICAL_SOURCE_PROVENANCE.md",
+    "LICENSE",
+    "LICENSE_SCOPE.md",
+    "README.md",
+    "REPRODUCIBILITY.md",
+    "artifacts/provenance/historical_reconstruction_audit.json",
+    "scripts/reconstruct_clean_source_from_historical_json.py"
+  ],
+  "explicit_exclusions": [
+    "input_snapshot/raw/Annotation_and_Mapping_Combined.csv",
+    "input_snapshot/provenance/prompt.txt",
+    "STUDY_PROTOCOL_DRAFT.md",
+    "PROTOCOL_AMENDMENTS.md",
+    "AGENTS.md",
+    ".github/",
+    "reports/",
+    "manuscript_support/",
+    "submission/",
+    "all journal-specific manuscript/article packages and publisher templates",
+    "artifacts/publication_package/",
+    "all Git history and pull-request/workflow history"
+  ],
+  "historical_source_import": {
+    "repository": "Djaber1979/-Behavioral-Augmentation-of-UML-Class-Diagrams",
+    "commit": "b8e7814bdab4b863c0d679952a18dafff21c84c4",
+    "construction": "pinned-public-source-import",
+    "files": [
+      {
+        "source": "JSON/ChatGPT-4o_run1.json",
+        "destination": "historical_generation/json/ChatGPT-4o_run1.json"
+      },
+      {
+        "source": "JSON/ChatGPT-4o_run10.json",
+        "destination": "historical_generation/json/ChatGPT-4o_run10.json"
+      },
+      {
+        "source": "JSON/ChatGPT-4o_run2.json",
+        "destination": "historical_generation/json/ChatGPT-4o_run2.json"
+      },
+      {
+        "source": "JSON/ChatGPT-4o_run3.json",
+        "destination": "historical_generation/json/ChatGPT-4o_run3.json"
+      },
+      {
+        "source": "JSON/ChatGPT-4o_run4.json",
+        "destination": "historical_generation/json/ChatGPT-4o_run4.json"
+      },
+      {
+        "source": "JSON/ChatGPT-4o_run5.json",
+        "destination": "historical_generation/json/ChatGPT-4o_run5.json"
+      },
+      {
+        "source": "JSON/ChatGPT-4o_run6.json",
+        "destination": "historical_generation/json/ChatGPT-4o_run6.json"
+      },
+      {
+        "source": "JSON/ChatGPT-4o_run7.json",
+        "destination": "historical_generation/json/ChatGPT-4o_run7.json"
+      },
+      {
+        "source": "JSON/ChatGPT-4o_run8.json",
+        "destination": "historical_generation/json/ChatGPT-4o_run8.json"
+      },
+      {
+        "source": "JSON/ChatGPT-4o_run9.json",
+        "destination": "historical_generation/json/ChatGPT-4o_run9.json"
+      },
+      {
+        "source": "JSON/ChatGPT-o3_run1.json",
+        "destination": "historical_generation/json/ChatGPT-o3_run1.json"
+      },
+      {
+        "source": "JSON/ChatGPT-o3_run10.json",
+        "destination": "historical_generation/json/ChatGPT-o3_run10.json"
+      },
+      {
+        "source": "JSON/ChatGPT-o3_run2.json",
+        "destination": "historical_generation/json/ChatGPT-o3_run2.json"
+      },
+      {
+        "source": "JSON/ChatGPT-o3_run3.json",
+        "destination": "historical_generation/json/ChatGPT-o3_run3.json"
+      },
+      {
+        "source": "JSON/ChatGPT-o3_run4.json",
+        "destination": "historical_generation/json/ChatGPT-o3_run4.json"
+      },
+      {
+        "source": "JSON/ChatGPT-o3_run5.json",
+        "destination": "historical_generation/json/ChatGPT-o3_run5.json"
+      },
+      {
+        "source": "JSON/ChatGPT-o3_run6.json",
+        "destination": "historical_generation/json/ChatGPT-o3_run6.json"
+      },
+      {
+        "source": "JSON/ChatGPT-o3_run7.json",
+        "destination": "historical_generation/json/ChatGPT-o3_run7.json"
+      },
+      {
+        "source": "JSON/ChatGPT-o3_run8.json",
+        "destination": "historical_generation/json/ChatGPT-o3_run8.json"
+      },
+      {
+        "source": "JSON/ChatGPT-o3_run9.json",
+        "destination": "historical_generation/json/ChatGPT-o3_run9.json"
+      },
+      {
+        "source": "JSON/Claude3.7_run1.json",
+        "destination": "historical_generation/json/Claude3.7_run1.json"
+      },
+      {
+        "source": "JSON/Claude3.7_run10.json",
+        "destination": "historical_generation/json/Claude3.7_run10.json"
+      },
+      {
+        "source": "JSON/Claude3.7_run2.json",
+        "destination": "historical_generation/json/Claude3.7_run2.json"
+      },
+      {
+        "source": "JSON/Claude3.7_run3.json",
+        "destination": "historical_generation/json/Claude3.7_run3.json"
+      },
+      {
+        "source": "JSON/Claude3.7_run4.json",
+        "destination": "historical_generation/json/Claude3.7_run4.json"
+      },
+      {
+        "source": "JSON/Claude3.7_run5.json",
+        "destination": "historical_generation/json/Claude3.7_run5.json"
+      },
+      {
+        "source": "JSON/Claude3.7_run6.json",
+        "destination": "historical_generation/json/Claude3.7_run6.json"
+      },
+      {
+        "source": "JSON/Claude3.7_run7.json",
+        "destination": "historical_generation/json/Claude3.7_run7.json"
+      },
+      {
+        "source": "JSON/Claude3.7_run8.json",
+        "destination": "historical_generation/json/Claude3.7_run8.json"
+      },
+      {
+        "source": "JSON/Claude3.7_run9.json",
+        "destination": "historical_generation/json/Claude3.7_run9.json"
+      },
+      {
+        "source": "JSON/DeepSeek(R1)_run1.json",
+        "destination": "historical_generation/json/DeepSeek(R1)_run1.json"
+      },
+      {
+        "source": "JSON/DeepSeek(R1)_run10.json",
+        "destination": "historical_generation/json/DeepSeek(R1)_run10.json"
+      },
+      {
+        "source": "JSON/DeepSeek(R1)_run2.json",
+        "destination": "historical_generation/json/DeepSeek(R1)_run2.json"
+      },
+      {
+        "source": "JSON/DeepSeek(R1)_run3.json",
+        "destination": "historical_generation/json/DeepSeek(R1)_run3.json"
+      },
+      {
+        "source": "JSON/DeepSeek(R1)_run4.json",
+        "destination": "historical_generation/json/DeepSeek(R1)_run4.json"
+      },
+      {
+        "source": "JSON/DeepSeek(R1)_run5.json",
+        "destination": "historical_generation/json/DeepSeek(R1)_run5.json"
+      },
+      {
+        "source": "JSON/DeepSeek(R1)_run6.json",
+        "destination": "historical_generation/json/DeepSeek(R1)_run6.json"
+      },
+      {
+        "source": "JSON/DeepSeek(R1)_run7.json",
+        "destination": "historical_generation/json/DeepSeek(R1)_run7.json"
+      },
+      {
+        "source": "JSON/DeepSeek(R1)_run8.json",
+        "destination": "historical_generation/json/DeepSeek(R1)_run8.json"
+      },
+      {
+        "source": "JSON/DeepSeek(R1)_run9.json",
+        "destination": "historical_generation/json/DeepSeek(R1)_run9.json"
+      },
+      {
+        "source": "JSON/Gemini-2.5-Pro-Preview-05-06_run1.json",
+        "destination": "historical_generation/json/Gemini-2.5-Pro-Preview-05-06_run1.json"
+      },
+      {
+        "source": "JSON/Gemini-2.5-Pro-Preview-05-06_run10.json",
+        "destination": "historical_generation/json/Gemini-2.5-Pro-Preview-05-06_run10.json"
+      },
+      {
+        "source": "JSON/Gemini-2.5-Pro-Preview-05-06_run2.json",
+        "destination": "historical_generation/json/Gemini-2.5-Pro-Preview-05-06_run2.json"
+      },
+      {
+        "source": "JSON/Gemini-2.5-Pro-Preview-05-06_run3.json",
+        "destination": "historical_generation/json/Gemini-2.5-Pro-Preview-05-06_run3.json"
+      },
+      {
+        "source": "JSON/Gemini-2.5-Pro-Preview-05-06_run4.json",
+        "destination": "historical_generation/json/Gemini-2.5-Pro-Preview-05-06_run4.json"
+      },
+      {
+        "source": "JSON/Gemini-2.5-Pro-Preview-05-06_run5.json",
+        "destination": "historical_generation/json/Gemini-2.5-Pro-Preview-05-06_run5.json"
+      },
+      {
+        "source": "JSON/Gemini-2.5-Pro-Preview-05-06_run6.json",
+        "destination": "historical_generation/json/Gemini-2.5-Pro-Preview-05-06_run6.json"
+      },
+      {
+        "source": "JSON/Gemini-2.5-Pro-Preview-05-06_run7.json",
+        "destination": "historical_generation/json/Gemini-2.5-Pro-Preview-05-06_run7.json"
+      },
+      {
+        "source": "JSON/Gemini-2.5-Pro-Preview-05-06_run8.json",
+        "destination": "historical_generation/json/Gemini-2.5-Pro-Preview-05-06_run8.json"
+      },
+      {
+        "source": "JSON/Gemini-2.5-Pro-Preview-05-06_run9.json",
+        "destination": "historical_generation/json/Gemini-2.5-Pro-Preview-05-06_run9.json"
+      },
+      {
+        "source": "JSON/Grok3_run1.json",
+        "destination": "historical_generation/json/Grok3_run1.json"
+      },
+      {
+        "source": "JSON/Grok3_run10.json",
+        "destination": "historical_generation/json/Grok3_run10.json"
+      },
+      {
+        "source": "JSON/Grok3_run2.json",
+        "destination": "historical_generation/json/Grok3_run2.json"
+      },
+      {
+        "source": "JSON/Grok3_run3.json",
+        "destination": "historical_generation/json/Grok3_run3.json"
+      },
+      {
+        "source": "JSON/Grok3_run4.json",
+        "destination": "historical_generation/json/Grok3_run4.json"
+      },
+      {
+        "source": "JSON/Grok3_run5.json",
+        "destination": "historical_generation/json/Grok3_run5.json"
+      },
+      {
+        "source": "JSON/Grok3_run6.json",
+        "destination": "historical_generation/json/Grok3_run6.json"
+      },
+      {
+        "source": "JSON/Grok3_run7.json",
+        "destination": "historical_generation/json/Grok3_run7.json"
+      },
+      {
+        "source": "JSON/Grok3_run8.json",
+        "destination": "historical_generation/json/Grok3_run8.json"
+      },
+      {
+        "source": "JSON/Grok3_run9.json",
+        "destination": "historical_generation/json/Grok3_run9.json"
+      },
+      {
+        "source": "JSON/Llama4_run1.json",
+        "destination": "historical_generation/json/Llama4_run1.json"
+      },
+      {
+        "source": "JSON/Llama4_run10.json",
+        "destination": "historical_generation/json/Llama4_run10.json"
+      },
+      {
+        "source": "JSON/Llama4_run2.json",
+        "destination": "historical_generation/json/Llama4_run2.json"
+      },
+      {
+        "source": "JSON/Llama4_run3.json",
+        "destination": "historical_generation/json/Llama4_run3.json"
+      },
+      {
+        "source": "JSON/Llama4_run4.json",
+        "destination": "historical_generation/json/Llama4_run4.json"
+      },
+      {
+        "source": "JSON/Llama4_run5.json",
+        "destination": "historical_generation/json/Llama4_run5.json"
+      },
+      {
+        "source": "JSON/Llama4_run6.json",
+        "destination": "historical_generation/json/Llama4_run6.json"
+      },
+      {
+        "source": "JSON/Llama4_run7.json",
+        "destination": "historical_generation/json/Llama4_run7.json"
+      },
+      {
+        "source": "JSON/Llama4_run8.json",
+        "destination": "historical_generation/json/Llama4_run8.json"
+      },
+      {
+        "source": "JSON/Llama4_run9.json",
+        "destination": "historical_generation/json/Llama4_run9.json"
+      },
+      {
+        "source": "JSON/Mistral_run1.json",
+        "destination": "historical_generation/json/Mistral_run1.json"
+      },
+      {
+        "source": "JSON/Mistral_run10.json",
+        "destination": "historical_generation/json/Mistral_run10.json"
+      },
+      {
+        "source": "JSON/Mistral_run2.json",
+        "destination": "historical_generation/json/Mistral_run2.json"
+      },
+      {
+        "source": "JSON/Mistral_run3.json",
+        "destination": "historical_generation/json/Mistral_run3.json"
+      },
+      {
+        "source": "JSON/Mistral_run4.json",
+        "destination": "historical_generation/json/Mistral_run4.json"
+      },
+      {
+        "source": "JSON/Mistral_run5.json",
+        "destination": "historical_generation/json/Mistral_run5.json"
+      },
+      {
+        "source": "JSON/Mistral_run6.json",
+        "destination": "historical_generation/json/Mistral_run6.json"
+      },
+      {
+        "source": "JSON/Mistral_run7.json",
+        "destination": "historical_generation/json/Mistral_run7.json"
+      },
+      {
+        "source": "JSON/Mistral_run8.json",
+        "destination": "historical_generation/json/Mistral_run8.json"
+      },
+      {
+        "source": "JSON/Mistral_run9.json",
+        "destination": "historical_generation/json/Mistral_run9.json"
+      },
+      {
+        "source": "JSON/Qwen3_run1.json",
+        "destination": "historical_generation/json/Qwen3_run1.json"
+      },
+      {
+        "source": "JSON/Qwen3_run10.json",
+        "destination": "historical_generation/json/Qwen3_run10.json"
+      },
+      {
+        "source": "JSON/Qwen3_run2.json",
+        "destination": "historical_generation/json/Qwen3_run2.json"
+      },
+      {
+        "source": "JSON/Qwen3_run3.json",
+        "destination": "historical_generation/json/Qwen3_run3.json"
+      },
+      {
+        "source": "JSON/Qwen3_run4.json",
+        "destination": "historical_generation/json/Qwen3_run4.json"
+      },
+      {
+        "source": "JSON/Qwen3_run5.json",
+        "destination": "historical_generation/json/Qwen3_run5.json"
+      },
+      {
+        "source": "JSON/Qwen3_run6.json",
+        "destination": "historical_generation/json/Qwen3_run6.json"
+      },
+      {
+        "source": "JSON/Qwen3_run7.json",
+        "destination": "historical_generation/json/Qwen3_run7.json"
+      },
+      {
+        "source": "JSON/Qwen3_run8.json",
+        "destination": "historical_generation/json/Qwen3_run8.json"
+      },
+      {
+        "source": "JSON/Qwen3_run9.json",
+        "destination": "historical_generation/json/Qwen3_run9.json"
+      },
+      {
+        "source": "Python/puml_to_json.py",
+        "destination": "historical_generation/parser/puml_to_json.py"
+      },
+      {
+        "source": "Python/Modify_EmptyStrings_In_Puml.py",
+        "destination": "historical_generation/postprocessing/Modify_EmptyStrings_In_Puml.py"
+      },
+      {
+        "source": "Prompts/Main.txt",
+        "destination": "historical_generation/prompts/Main.txt"
+      },
+      {
+        "source": "Prompts/Methodless.txt",
+        "destination": "historical_generation/prompts/Methodless.txt"
+      },
+      {
+        "source": "Prompts/UCs.txt",
+        "destination": "historical_generation/prompts/UCs.txt"
+      },
+      {
+        "source": "puml/ChatGPT-4o_run1.puml",
+        "destination": "historical_generation/puml/ChatGPT-4o_run1.puml"
+      },
+      {
+        "source": "puml/ChatGPT-4o_run10.puml",
+        "destination": "historical_generation/puml/ChatGPT-4o_run10.puml"
+      },
+      {
+        "source": "puml/ChatGPT-4o_run2.puml",
+        "destination": "historical_generation/puml/ChatGPT-4o_run2.puml"
+      },
+      {
+        "source": "puml/ChatGPT-4o_run3.puml",
+        "destination": "historical_generation/puml/ChatGPT-4o_run3.puml"
+      },
+      {
+        "source": "puml/ChatGPT-4o_run4.puml",
+        "destination": "historical_generation/puml/ChatGPT-4o_run4.puml"
+      },
+      {
+        "source": "puml/ChatGPT-4o_run5.puml",
+        "destination": "historical_generation/puml/ChatGPT-4o_run5.puml"
+      },
+      {
+        "source": "puml/ChatGPT-4o_run6.puml",
+        "destination": "historical_generation/puml/ChatGPT-4o_run6.puml"
+      },
+      {
+        "source": "puml/ChatGPT-4o_run7.puml",
+        "destination": "historical_generation/puml/ChatGPT-4o_run7.puml"
+      },
+      {
+        "source": "puml/ChatGPT-4o_run8.puml",
+        "destination": "historical_generation/puml/ChatGPT-4o_run8.puml"
+      },
+      {
+        "source": "puml/ChatGPT-4o_run9.puml",
+        "destination": "historical_generation/puml/ChatGPT-4o_run9.puml"
+      },
+      {
+        "source": "puml/ChatGPT-o3_run1.puml",
+        "destination": "historical_generation/puml/ChatGPT-o3_run1.puml"
+      },
+      {
+        "source": "puml/ChatGPT-o3_run10.puml",
+        "destination": "historical_generation/puml/ChatGPT-o3_run10.puml"
+      },
+      {
+        "source": "puml/ChatGPT-o3_run2.puml",
+        "destination": "historical_generation/puml/ChatGPT-o3_run2.puml"
+      },
+      {
+        "source": "puml/ChatGPT-o3_run3.puml",
+        "destination": "historical_generation/puml/ChatGPT-o3_run3.puml"
+      },
+      {
+        "source": "puml/ChatGPT-o3_run4.puml",
+        "destination": "historical_generation/puml/ChatGPT-o3_run4.puml"
+      },
+      {
+        "source": "puml/ChatGPT-o3_run5.puml",
+        "destination": "historical_generation/puml/ChatGPT-o3_run5.puml"
+      },
+      {
+        "source": "puml/ChatGPT-o3_run6.puml",
+        "destination": "historical_generation/puml/ChatGPT-o3_run6.puml"
+      },
+      {
+        "source": "puml/ChatGPT-o3_run7.puml",
+        "destination": "historical_generation/puml/ChatGPT-o3_run7.puml"
+      },
+      {
+        "source": "puml/ChatGPT-o3_run8.puml",
+        "destination": "historical_generation/puml/ChatGPT-o3_run8.puml"
+      },
+      {
+        "source": "puml/ChatGPT-o3_run9.puml",
+        "destination": "historical_generation/puml/ChatGPT-o3_run9.puml"
+      },
+      {
+        "source": "puml/Claude3.7_run1.puml",
+        "destination": "historical_generation/puml/Claude3.7_run1.puml"
+      },
+      {
+        "source": "puml/Claude3.7_run10.puml",
+        "destination": "historical_generation/puml/Claude3.7_run10.puml"
+      },
+      {
+        "source": "puml/Claude3.7_run2.puml",
+        "destination": "historical_generation/puml/Claude3.7_run2.puml"
+      },
+      {
+        "source": "puml/Claude3.7_run3.puml",
+        "destination": "historical_generation/puml/Claude3.7_run3.puml"
+      },
+      {
+        "source": "puml/Claude3.7_run4.puml",
+        "destination": "historical_generation/puml/Claude3.7_run4.puml"
+      },
+      {
+        "source": "puml/Claude3.7_run5.puml",
+        "destination": "historical_generation/puml/Claude3.7_run5.puml"
+      },
+      {
+        "source": "puml/Claude3.7_run6.puml",
+        "destination": "historical_generation/puml/Claude3.7_run6.puml"
+      },
+      {
+        "source": "puml/Claude3.7_run7.puml",
+        "destination": "historical_generation/puml/Claude3.7_run7.puml"
+      },
+      {
+        "source": "puml/Claude3.7_run8.puml",
+        "destination": "historical_generation/puml/Claude3.7_run8.puml"
+      },
+      {
+        "source": "puml/Claude3.7_run9.puml",
+        "destination": "historical_generation/puml/Claude3.7_run9.puml"
+      },
+      {
+        "source": "puml/DeepSeek(R1)_run1.puml",
+        "destination": "historical_generation/puml/DeepSeek(R1)_run1.puml"
+      },
+      {
+        "source": "puml/DeepSeek(R1)_run10.puml",
+        "destination": "historical_generation/puml/DeepSeek(R1)_run10.puml"
+      },
+      {
+        "source": "puml/DeepSeek(R1)_run2.puml",
+        "destination": "historical_generation/puml/DeepSeek(R1)_run2.puml"
+      },
+      {
+        "source": "puml/DeepSeek(R1)_run3.puml",
+        "destination": "historical_generation/puml/DeepSeek(R1)_run3.puml"
+      },
+      {
+        "source": "puml/DeepSeek(R1)_run4.puml",
+        "destination": "historical_generation/puml/DeepSeek(R1)_run4.puml"
+      },
+      {
+        "source": "puml/DeepSeek(R1)_run5.puml",
+        "destination": "historical_generation/puml/DeepSeek(R1)_run5.puml"
+      },
+      {
+        "source": "puml/DeepSeek(R1)_run6.puml",
+        "destination": "historical_generation/puml/DeepSeek(R1)_run6.puml"
+      },
+      {
+        "source": "puml/DeepSeek(R1)_run7.puml",
+        "destination": "historical_generation/puml/DeepSeek(R1)_run7.puml"
+      },
+      {
+        "source": "puml/DeepSeek(R1)_run8.puml",
+        "destination": "historical_generation/puml/DeepSeek(R1)_run8.puml"
+      },
+      {
+        "source": "puml/DeepSeek(R1)_run9.puml",
+        "destination": "historical_generation/puml/DeepSeek(R1)_run9.puml"
+      },
+      {
+        "source": "puml/Gemini-2.5-Pro-Preview-05-06_run1.puml",
+        "destination": "historical_generation/puml/Gemini-2.5-Pro-Preview-05-06_run1.puml"
+      },
+      {
+        "source": "puml/Gemini-2.5-Pro-Preview-05-06_run10.puml",
+        "destination": "historical_generation/puml/Gemini-2.5-Pro-Preview-05-06_run10.puml"
+      },
+      {
+        "source": "puml/Gemini-2.5-Pro-Preview-05-06_run2.puml",
+        "destination": "historical_generation/puml/Gemini-2.5-Pro-Preview-05-06_run2.puml"
+      },
+      {
+        "source": "puml/Gemini-2.5-Pro-Preview-05-06_run3.puml",
+        "destination": "historical_generation/puml/Gemini-2.5-Pro-Preview-05-06_run3.puml"
+      },
+      {
+        "source": "puml/Gemini-2.5-Pro-Preview-05-06_run4.puml",
+        "destination": "historical_generation/puml/Gemini-2.5-Pro-Preview-05-06_run4.puml"
+      },
+      {
+        "source": "puml/Gemini-2.5-Pro-Preview-05-06_run5.puml",
+        "destination": "historical_generation/puml/Gemini-2.5-Pro-Preview-05-06_run5.puml"
+      },
+      {
+        "source": "puml/Gemini-2.5-Pro-Preview-05-06_run6.puml",
+        "destination": "historical_generation/puml/Gemini-2.5-Pro-Preview-05-06_run6.puml"
+      },
+      {
+        "source": "puml/Gemini-2.5-Pro-Preview-05-06_run7.puml",
+        "destination": "historical_generation/puml/Gemini-2.5-Pro-Preview-05-06_run7.puml"
+      },
+      {
+        "source": "puml/Gemini-2.5-Pro-Preview-05-06_run8.puml",
+        "destination": "historical_generation/puml/Gemini-2.5-Pro-Preview-05-06_run8.puml"
+      },
+      {
+        "source": "puml/Gemini-2.5-Pro-Preview-05-06_run9.puml",
+        "destination": "historical_generation/puml/Gemini-2.5-Pro-Preview-05-06_run9.puml"
+      },
+      {
+        "source": "puml/Grok3_run1.puml",
+        "destination": "historical_generation/puml/Grok3_run1.puml"
+      },
+      {
+        "source": "puml/Grok3_run10.puml",
+        "destination": "historical_generation/puml/Grok3_run10.puml"
+      },
+      {
+        "source": "puml/Grok3_run2.puml",
+        "destination": "historical_generation/puml/Grok3_run2.puml"
+      },
+      {
+        "source": "puml/Grok3_run3.puml",
+        "destination": "historical_generation/puml/Grok3_run3.puml"
+      },
+      {
+        "source": "puml/Grok3_run4.puml",
+        "destination": "historical_generation/puml/Grok3_run4.puml"
+      },
+      {
+        "source": "puml/Grok3_run5.puml",
+        "destination": "historical_generation/puml/Grok3_run5.puml"
+      },
+      {
+        "source": "puml/Grok3_run6.puml",
+        "destination": "historical_generation/puml/Grok3_run6.puml"
+      },
+      {
+        "source": "puml/Grok3_run7.puml",
+        "destination": "historical_generation/puml/Grok3_run7.puml"
+      },
+      {
+        "source": "puml/Grok3_run8.puml",
+        "destination": "historical_generation/puml/Grok3_run8.puml"
+      },
+      {
+        "source": "puml/Grok3_run9.puml",
+        "destination": "historical_generation/puml/Grok3_run9.puml"
+      },
+      {
+        "source": "puml/Llama4_run1.puml",
+        "destination": "historical_generation/puml/Llama4_run1.puml"
+      },
+      {
+        "source": "puml/Llama4_run10.puml",
+        "destination": "historical_generation/puml/Llama4_run10.puml"
+      },
+      {
+        "source": "puml/Llama4_run2.puml",
+        "destination": "historical_generation/puml/Llama4_run2.puml"
+      },
+      {
+        "source": "puml/Llama4_run3.puml",
+        "destination": "historical_generation/puml/Llama4_run3.puml"
+      },
+      {
+        "source": "puml/Llama4_run4.puml",
+        "destination": "historical_generation/puml/Llama4_run4.puml"
+      },
+      {
+        "source": "puml/Llama4_run5.puml",
+        "destination": "historical_generation/puml/Llama4_run5.puml"
+      },
+      {
+        "source": "puml/Llama4_run6.puml",
+        "destination": "historical_generation/puml/Llama4_run6.puml"
+      },
+      {
+        "source": "puml/Llama4_run7.puml",
+        "destination": "historical_generation/puml/Llama4_run7.puml"
+      },
+      {
+        "source": "puml/Llama4_run8.puml",
+        "destination": "historical_generation/puml/Llama4_run8.puml"
+      },
+      {
+        "source": "puml/Llama4_run9.puml",
+        "destination": "historical_generation/puml/Llama4_run9.puml"
+      },
+      {
+        "source": "puml/Mistral_run1.puml",
+        "destination": "historical_generation/puml/Mistral_run1.puml"
+      },
+      {
+        "source": "puml/Mistral_run10.puml",
+        "destination": "historical_generation/puml/Mistral_run10.puml"
+      },
+      {
+        "source": "puml/Mistral_run2.puml",
+        "destination": "historical_generation/puml/Mistral_run2.puml"
+      },
+      {
+        "source": "puml/Mistral_run3.puml",
+        "destination": "historical_generation/puml/Mistral_run3.puml"
+      },
+      {
+        "source": "puml/Mistral_run4.puml",
+        "destination": "historical_generation/puml/Mistral_run4.puml"
+      },
+      {
+        "source": "puml/Mistral_run5.puml",
+        "destination": "historical_generation/puml/Mistral_run5.puml"
+      },
+      {
+        "source": "puml/Mistral_run6.puml",
+        "destination": "historical_generation/puml/Mistral_run6.puml"
+      },
+      {
+        "source": "puml/Mistral_run7.puml",
+        "destination": "historical_generation/puml/Mistral_run7.puml"
+      },
+      {
+        "source": "puml/Mistral_run8.puml",
+        "destination": "historical_generation/puml/Mistral_run8.puml"
+      },
+      {
+        "source": "puml/Mistral_run9.puml",
+        "destination": "historical_generation/puml/Mistral_run9.puml"
+      },
+      {
+        "source": "puml/Qwen3_run1.puml",
+        "destination": "historical_generation/puml/Qwen3_run1.puml"
+      },
+      {
+        "source": "puml/Qwen3_run10.puml",
+        "destination": "historical_generation/puml/Qwen3_run10.puml"
+      },
+      {
+        "source": "puml/Qwen3_run2.puml",
+        "destination": "historical_generation/puml/Qwen3_run2.puml"
+      },
+      {
+        "source": "puml/Qwen3_run3.puml",
+        "destination": "historical_generation/puml/Qwen3_run3.puml"
+      },
+      {
+        "source": "puml/Qwen3_run4.puml",
+        "destination": "historical_generation/puml/Qwen3_run4.puml"
+      },
+      {
+        "source": "puml/Qwen3_run5.puml",
+        "destination": "historical_generation/puml/Qwen3_run5.puml"
+      },
+      {
+        "source": "puml/Qwen3_run6.puml",
+        "destination": "historical_generation/puml/Qwen3_run6.puml"
+      },
+      {
+        "source": "puml/Qwen3_run7.puml",
+        "destination": "historical_generation/puml/Qwen3_run7.puml"
+      },
+      {
+        "source": "puml/Qwen3_run8.puml",
+        "destination": "historical_generation/puml/Qwen3_run8.puml"
+      },
+      {
+        "source": "puml/Qwen3_run9.puml",
+        "destination": "historical_generation/puml/Qwen3_run9.puml"
+      },
+      {
+        "source": "puml/methodless.puml",
+        "destination": "historical_generation/puml/methodless.puml"
+      }
+    ],
+    "generated_public_helpers": [
+      "HISTORICAL_SOURCE_PROVENANCE.md",
+      "scripts/reconstruct_clean_source_from_historical_json.py",
+      "artifacts/provenance/historical_reconstruction_audit.json"
+    ],
+    "upstream_material_deliberately_not_imported": [
+      "reports/Annotation_and_Mapping_Combined.csv",
+      "Python/main3.py",
+      "all legacy semantic outputs containing Best_Match_Action or SimilarityScore",
+      "Git history, analysis reports, plots, and unrelated historical scripts"
+    ]
+  },
+  "license": {
+    "repository_authored_material": "MIT",
+    "exceptions_document": "LICENSE_SCOPE.md"
+  },
+  "publication_policy": {
+    "artifact_only_repository": true,
+    "journal_specific_manuscript_files_included": false,
+    "superseded_article_versions_included": false
+  }
+}

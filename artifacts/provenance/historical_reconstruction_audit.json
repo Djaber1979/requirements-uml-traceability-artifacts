@@ -1,0 +1,36 @@
+{
+  "upstream_repository": "Djaber1979/-Behavioral-Augmentation-of-UML-Class-Diagrams",
+  "upstream_commit": "b8e7814bdab4b863c0d679952a18dafff21c84c4",
+  "generated_puml_files": 90,
+  "parsed_json_files": 90,
+  "reconstructed_rows": 3373,
+  "frozen_clean_rows": 3373,
+  "permitted_columns": [
+    "Model",
+    "Run",
+    "File",
+    "Class",
+    "MethodName",
+    "Signature",
+    "Has_UC_Annotation",
+    "UC_References",
+    "UC_Action"
+  ],
+  "row_order_required": false,
+  "legacy_semantic_columns_reconstructed": false,
+  "native_exact_row_multiset_match": false,
+  "row_multiset_match_after_documented_encoding_normalization": true,
+  "encoding_artifact_rows": 1,
+  "encoding_artifact_field": "UC_Action",
+  "encoding_artifact_kind": "UTF-8 smart-apostrophe mojibake in frozen CSV text",
+  "archive_native_text": "System updates the user’s role (actual state change)",
+  "frozen_text": "System updates the userâ€™s role (actual state change)",
+  "affected_identity": {
+    "Model": "Gemini-2.5-Pro-Preview-05-06",
+    "Run": "3",
+    "File": "Gemini-2.5-Pro-Preview-05-06_run3.json",
+    "Class": "UserProfile",
+    "MethodName": "updateRole",
+    "UC_References": "21"
+  }
+}

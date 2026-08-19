@@ -1,0 +1,64 @@
+status: frozen
+frozen: true
+freeze_prompt: 3
+candidate_uc_ids: [1, 21]
+
+primary_metrics:
+  - Hit@1_declared
+  - ReciprocalRank_declared
+secondary_metrics:
+  - Hit@3_declared
+  - Hit@5_declared
+  - Declared_UC_rank
+  - TieAwareTop1Credit
+
+ranking:
+  score_order: descending
+  exact_tie_break: ascending_numeric_uc_id
+  candidate_count: 21
+  tie_aware_top1: "1/t when declared UC is in a t-way maximum-score tie; otherwise 0"
+
+aggregation:
+  primary_unit: "Model x Run"
+  overall_primary: "equal-cell macro mean across Model x Run cells with at least one primary query (materialized: 69/90)"
+  zero_primary_query_cells: "NA for semantic metrics; reported structurally under RQ1; no zero imputation"
+  by_model: "mean across eligible run-level summaries, with eligible-run coverage n/10 reported"
+  micro_row_weighted: sensitivity_only
+
+lexical_primary:
+  method: tfidf_cosine
+  fit_corpus: "21 requirement documents only"
+  analyzer: word
+  ngram_min: 1
+  ngram_max: 2
+  lowercase: true
+  min_df: 1
+  max_df: 1.0
+  sublinear_tf: true
+  smooth_idf: true
+  norm: l2
+  stop_words: null
+
+cross_method_consensus:
+  metrics:
+    - Top1_exact_agreement
+    - Top3_set_jaccard
+    - Full21_rank_spearman_tie_aware
+    - DualMethodDeclaredTop1Category
+  spearman_ties: "convert each 21-UC score vector to average ranks for exact ties, then Pearson correlate rank vectors"
+  spearman_constant_vector: NA
+  report_spearman_na_rate: true
+
+negative_control:
+  type: "permutation of UC-ID to requirement-text mapping"
+  permutations: 2000
+  seed: 20260818
+  same_schedule_across_methods: true
+  refit_models_per_permutation: false
+  reporting:
+    - distribution_median
+    - central_95_percent_perturbation_range
+    - empirical_percentile
+  inferential_p_value_claim: false
+
+interpretation: "Retrieval concordance/ranking agreement only; not semantic correctness, precision, recall, or accuracy."

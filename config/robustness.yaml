@@ -1,0 +1,57 @@
+status: frozen
+frozen: true
+freeze_prompt: 3
+
+permutation_seed: 20260818
+permutations: 2000
+
+run_resampling:
+  seed: 20260819
+  replicates: 2000
+  unit: run
+  within_model: true
+  draws_per_model: 10
+  replacement: true
+  repeated_draws_keep_multiplicity: true
+  zero_primary_query_draw: NA
+  by_model_replication_summary: "mean across non-NA sampled draws; NA if all 10 sampled draws are zero-query"
+  overall_replication_summary: "mean across all non-NA sampled Model x Run draws across models, retaining multiplicity"
+  record_non_na_draw_count: true
+  record_contributing_model_count: true
+  all_draws_na_replication: NA
+  reporting_name: "run-resampling perturbation distribution"
+  confidence_interval_language_forbidden: true
+
+representation_sensitivities:
+  requirement:
+    - "Title + Description"
+    - "Title + Description + MainScenario"
+    - "Title + Description + MainScenario + Extensions"
+  behavior:
+    - "MethodName"
+    - "Class + MethodName"
+    - "Class + MethodName + Signature"
+
+population_sensitivities:
+  - include_off_scaffold
+  - raw_rows_without_duplicate_collapse
+  - micro_row_weighted_aggregation
+
+semantic_model_sensitivity: sentence-transformers/all-MiniLM-L6-v2
+
+fragmentation:
+  exact_behavior_primary: true
+  model_uc_pairwise_run_jaccard: true
+  jaccard_formula: "intersection_size / union_size"
+  empty_union_jaccard: NA
+  report_evaluable_run_pairs_out_of_45: true
+  singleton_support: 1
+  recurrent_support_min_runs: 5
+  cross_model_union_jaccard: true
+  cross_model_empty_union_jaccard: NA
+  cross_model_support2_sensitivity: true
+  owner_metrics:
+    dominant_class_share: "max class count / eligible behavior count; NA when no eligible behavior"
+    normalized_shannon_entropy: "-sum(p*ln(p))/ln(K) for K>1; 0 for K=1; NA when no eligible behavior"
+
+note: "Robustness and edge-case settings are prespecified and must not be tuned after outcome inspection."

@@ -1,0 +1,6 @@
+Stage,Count,ShareOfAll
+All clean source rows,3373,1.0
+Has_UC_Annotation=True,2442,0.7239845834568633
+Valid deterministic UC1-UC21 reference,2408,0.713904536021346
+Annotated + valid UC + core fields + on-scaffold,2384,0.7067892084198043
+Unique primary semantic queries after within-run duplicate collapse,2369,0.7023421286688408

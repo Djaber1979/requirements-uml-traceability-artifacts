@@ -1,0 +1,23 @@
+{
+  "annotation_true_rows_with_invalid_or_out_of_spec_target": 34,
+  "embedding_model_loaded": false,
+  "funnel": {
+    "all_clean_rows": 3373,
+    "annotation_true": 2442,
+    "core_fields_complete": 2408,
+    "duplicate_rows_collapsed_in_primary": 15,
+    "exact_on_scaffold": 2384,
+    "primary_queries_after_within_run_dedup": 2369,
+    "valid_single_uc1_uc21": 2408
+  },
+  "model_count": 9,
+  "model_run_cells_all": 90,
+  "model_run_cells_with_primary_queries": 69,
+  "off_scaffold_rows_otherwise_semantic_eligible": 24,
+  "primary_duplicate_target_conflicts": 0,
+  "primary_raw_rows_with_blank_uc_action_retained": 633,
+  "prompt2_base_commit": "bc344f3826e7215e2d17d935922302dac05cdf0e",
+  "semantic_retrieval_executed": false,
+  "status": "FROZEN_STRUCTURAL_POPULATION_AUDIT",
+  "tfidf_executed": false
+}

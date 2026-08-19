@@ -1,0 +1,39 @@
+{
+  "contributing_models": {
+    "Max": 9.0,
+    "Mean": 8.9025,
+    "Median": 9.0,
+    "Min": 7.0,
+    "P025": 8.0,
+    "P975": 9.0,
+    "SD": 0.29839281012545743
+  },
+  "eligible_model_run_cells": 69,
+  "interpretation": "Perturbation distribution under within-model run resampling; not a confidence interval or p-value.",
+  "models": [
+    "ChatGPT-4o",
+    "ChatGPT-o3",
+    "Claude3.7",
+    "DeepSeek(R1)",
+    "Gemini-2.5-Pro-Preview-05-06",
+    "Grok3",
+    "Llama4",
+    "Mistral",
+    "Qwen3"
+  ],
+  "non_na_draws": {
+    "Max": 83.0,
+    "Mean": 68.9975,
+    "Median": 69.0,
+    "Min": 59.0,
+    "P025": 62.0,
+    "P975": 75.0,
+    "SD": 3.2071227865930143
+  },
+  "replicates": 2000,
+  "replicates_with_all_9_models_contributing": 1806,
+  "replicates_with_zero_non_na_draws": 0,
+  "seed": 20260819,
+  "source_runs_per_model": 10,
+  "zero_query_model_run_cells": 21
+}

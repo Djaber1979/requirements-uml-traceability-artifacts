@@ -1,0 +1,35 @@
+{
+  "eligible_model_run_cells": 69,
+  "methods": {
+    "MPNET": {
+      "EligibleModelRunCells": 69,
+      "Hit1EqualCellMacro": 0.6331853250339536,
+      "Hit1MicroSensitivity": 0.6171380329252849,
+      "Hit3EqualCellMacro": 0.7863258835353714,
+      "Hit5EqualCellMacro": 0.8188868591301723,
+      "MRREqualCellMacro": 0.7228516593134541,
+      "MRRMicroSensitivity": 0.7135892302294436,
+      "Method": "MPNET",
+      "PrimaryQueries": 2369,
+      "TieAwareTop1EqualCellMacro": 0.6331853250339536,
+      "ZeroQueryModelRunCells": 21
+    },
+    "TFIDF": {
+      "EligibleModelRunCells": 69,
+      "Hit1EqualCellMacro": 0.5587447835273328,
+      "Hit1MicroSensitivity": 0.5559307724778387,
+      "Hit3EqualCellMacro": 0.7552200399167359,
+      "Hit5EqualCellMacro": 0.8119698788953363,
+      "MRREqualCellMacro": 0.6759566897966709,
+      "MRRMicroSensitivity": 0.6729632034532667,
+      "Method": "TFIDF",
+      "PrimaryQueries": 2369,
+      "TieAwareTop1EqualCellMacro": 0.5556585738345584,
+      "ZeroQueryModelRunCells": 21
+    }
+  },
+  "primary_population_queries": 2369,
+  "prompt3_merge_commit": "4feddb466b7843af9e872cc44d88aa8d76efccbc",
+  "status": "PROMPT4_PRIMARY_RETRIEVAL_EXECUTED",
+  "zero_query_model_run_cells": 21
+}

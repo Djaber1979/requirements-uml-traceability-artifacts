@@ -1,0 +1,80 @@
+{
+  "cell_coverage": {
+    "cells": 90,
+    "primary_semantic_query_cells": 69,
+    "zero_annotation_cells": 21,
+    "zero_complete_trace_cells": 49,
+    "zero_primary_semantic_query_cells": 21,
+    "zero_valid_reference_cells": 21
+  },
+  "conditional_rates": {
+    "action_text_completeness_among_annotated": 0.7371007371007371,
+    "complete_trace_among_annotated": 0.7252252252252253,
+    "valid_reference_among_annotated": 0.9860769860769861
+  },
+  "cross_checks": {
+    "prompt2_expected_rows": true,
+    "prompt3_primary_query_count": true,
+    "prompt4_query_identity_exact": true
+  },
+  "duplicate_groups": 16,
+  "funnel": [
+    {
+      "Count": 3373,
+      "ShareOfAll": 1.0,
+      "Stage": "All clean source rows"
+    },
+    {
+      "Count": 2442,
+      "ShareOfAll": 0.7239845834568633,
+      "Stage": "Has_UC_Annotation=True"
+    },
+    {
+      "Count": 2408,
+      "ShareOfAll": 0.713904536021346,
+      "Stage": "Valid deterministic UC1-UC21 reference"
+    },
+    {
+      "Count": 2384,
+      "ShareOfAll": 0.7067892084198043,
+      "Stage": "Annotated + valid UC + core fields + on-scaffold"
+    },
+    {
+      "Count": 2369,
+      "ShareOfAll": 0.7023421286688408,
+      "Stage": "Unique primary semantic queries after within-run duplicate collapse"
+    }
+  ],
+  "interpretation_boundary": "Structural trace metadata completeness/coverage only; not semantic correctness or model quality.",
+  "invalid_reference_raw_values": {
+    "22": 34
+  },
+  "off_scaffold_classes": {
+    "PlatformManager": 8,
+    "ServiceRequestDetails": 9,
+    "User": 8,
+    "WasteTracking": 1
+  },
+  "population": {
+    "action_text_present_rows": 1800,
+    "all_rows": 3373,
+    "annotated_rows": 2442,
+    "complete_explicit_trace_rows": 1771,
+    "exact_duplicate_excess_rows": 16,
+    "invalid_reference_rows": 34,
+    "off_scaffold_rows": 26,
+    "primary_semantic_queries": 2369,
+    "reference_only_trace_rows": 637,
+    "valid_reference_rows": 2408
+  },
+  "primary_duplicate_reference_conflicts": 0,
+  "rates_of_all_rows": {
+    "complete_explicit_trace_rate": 0.5250518825970946,
+    "exact_duplicate_excess_rate": 0.004743551734361103,
+    "invalid_reference_rate": 0.010080047435517344,
+    "off_scaffold_rate": 0.007708271568336793,
+    "trace_annotation_rate": 0.7239845834568633,
+    "valid_reference_rate": 0.713904536021346
+  },
+  "status": "PASS"
+}

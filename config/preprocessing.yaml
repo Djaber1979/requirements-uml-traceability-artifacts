@@ -1,0 +1,51 @@
+status: frozen
+frozen: true
+freeze_prompt: 3
+freeze_base_commit: bc344f3826e7215e2d17d935922302dac05cdf0e
+
+primary_requirement_representation: "Title + Description + MainScenario"
+requirement_sensitivities:
+  - "Title + Description"
+  - "Title + Description + MainScenario"
+  - "Title + Description + MainScenario + Extensions"
+include_extensions_primary: false
+include_actors_primary: false
+include_preconditions_primary: false
+include_postconditions_primary: false
+
+primary_behavior_representation: "Class + MethodName + Signature"
+behavior_sensitivities:
+  - "MethodName"
+  - "Class + MethodName"
+  - "Class + MethodName + Signature"
+include_uc_action_in_primary_behavior_query: false
+excluded_semantic_query_field: "UC_Action"
+identifier_segmentation: "camelCase/PascalCase boundaries + underscores + hyphens + punctuation"
+whitespace_policy: "collapse repeated whitespace"
+render_template: "Class: {class}. Method: {method}. Signature: {signature}."
+
+canonical_behavior_key:
+  fields: [Model, Run, Class, MethodName, Signature]
+  class_alias_map:
+    "RoleManager <<service>>": "RoleManager"
+  method_normalization: "trim + casefold"
+  signature_normalization: "trim + collapse whitespace + normalize whitespace around punctuation + casefold"
+
+primary_semantic_population:
+  require_has_uc_annotation_true: true
+  valid_single_uc_range: [1, 21]
+  require_nonblank_core_fields: [Class, MethodName, Signature]
+  require_exact_scaffold_identity: true
+  collapse_within_model_run_exact_behavior_duplicates: true
+  missing_uc_action_excludes: false
+
+excluded_from_primary_semantic:
+  invalid_or_out_of_spec_uc_reference: true
+  unannotated_rows: true
+  off_scaffold_rows: true
+
+sensitivity_inclusions:
+  include_off_scaffold: true
+  retain_raw_duplicates: true
+
+note: "All rules frozen before TF-IDF or neural retrieval outcomes are computed. No source values are repaired or reassigned."

@@ -1,0 +1,11 @@
+{
+  "BothDeclaredTop1EqualCellMacro": 0.4917405790176082,
+  "EligibleModelRunCells": 69,
+  "ExactlyOneDeclaredTop1EqualCellMacro": 0.20844895052606985,
+  "Full21SpearmanTieAwareEqualCellMacro": 0.5917941795881556,
+  "NeitherDeclaredTop1EqualCellMacro": 0.2998104704563219,
+  "PrimaryQueries": 2369,
+  "SpearmanEvaluableCells": 69,
+  "Top1ExactAgreementEqualCellMacro": 0.6856596022002592,
+  "Top3SetJaccardEqualCellMacro": 0.5464735312040243
+}

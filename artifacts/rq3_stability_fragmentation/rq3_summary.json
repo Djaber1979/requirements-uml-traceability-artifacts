@@ -1,0 +1,107 @@
+{
+  "analysis_boundary": {
+    "Best_Match_Action_used": false,
+    "SimilarityScore_used": false,
+    "UC_Action_used": false,
+    "generator_quality_ranking": false,
+    "inferential_tests_run": false,
+    "semantic_outcomes_consumed": false
+  },
+  "cross_model": {
+    "primary_mean_jaccard_distribution": {
+      "max": 0.13407190803024138,
+      "mean": 0.035550048848750314,
+      "median": 0.020149410774410775,
+      "min": 0.0,
+      "n": 21,
+      "q1": 0.009543690403003697,
+      "q3": 0.054165972915972915
+    },
+    "support_ge2_mean_jaccard_distribution": {
+      "max": 0.12037037037037036,
+      "mean": 0.04095278361748165,
+      "median": 0.022727272727272728,
+      "min": 0.0,
+      "n": 19,
+      "q1": 0.011904761904761904,
+      "q3": 0.06015300302890883
+    },
+    "uc_count": 21
+  },
+  "fragmentation": {
+    "global_distinct_behavior_identities": 1260,
+    "recurrent_ge5_share_distribution": {
+      "max": 1.0,
+      "mean": 0.05698326510158091,
+      "median": 0.0,
+      "min": 0.0,
+      "n": 163,
+      "q1": 0.0,
+      "q3": 0.042147293700088725
+    },
+    "singleton_share_distribution": {
+      "max": 1.0,
+      "mean": 0.7300214209595391,
+      "median": 0.8,
+      "min": 0.0,
+      "n": 163,
+      "q1": 0.575187969924812,
+      "q3": 0.956439393939394
+    },
+    "union_behavior_count_distribution_by_model_uc": {
+      "max": 49.0,
+      "mean": 9.576687116564417,
+      "median": 7.0,
+      "min": 1.0,
+      "n": 163,
+      "q1": 4.0,
+      "q3": 12.0
+    }
+  },
+  "identity": {
+    "duplicate_reference_conflicts": 0,
+    "prompt4_query_identity_match": true
+  },
+  "ownership": {
+    "dominant_share_distribution": {
+      "max": 1.0,
+      "mean": 0.863108249892601,
+      "median": 1.0,
+      "min": 0.14285714285714285,
+      "n": 1048,
+      "q1": 0.6666666666666666,
+      "q3": 1.0
+    },
+    "normalized_entropy_distribution": {
+      "max": 1.0,
+      "mean": 0.2841508229021909,
+      "median": 0.0,
+      "min": 0.0,
+      "n": 1048,
+      "q1": 0.0,
+      "q3": 0.8649735207179272
+    },
+    "observed_model_run_uc_cells": 1048
+  },
+  "population": {
+    "clean_rows": 3373,
+    "model_run_uc_cells": 1890,
+    "model_uc_units": 189,
+    "rq3_primary_queries": 2369
+  },
+  "run_stability": {
+    "mean_of_model_uc_mean_jaccards": {
+      "max": 0.8,
+      "mean": 0.09990427334810033,
+      "median": 0.044444444444444446,
+      "min": 0.0,
+      "n": 163,
+      "q1": 0.004365079365079365,
+      "q3": 0.1355114998620181
+    },
+    "model_uc_units_with_evaluable_pairs": 163,
+    "total_empty_empty_run_pairs": 2604,
+    "total_evaluable_run_pairs": 5901
+  },
+  "status": "PASS_PENDING_VALIDATOR"
+}

@@ -1,0 +1,105 @@
+{
+  "boundaries": {
+    "generator_quality_ranking": false,
+    "legacy_semantic_fields_used": false,
+    "model_selection_from_sensitivity_outcomes": false,
+    "new_permutation_null_run": false,
+    "run_resampling_run": false,
+    "scenario_step_retrieval_run": false,
+    "significance_tests_run": false,
+    "uc_action_used": false
+  },
+  "design": "one_factor_at_a_time",
+  "mpnet_primary_reembedding_declared_rank_changes": 0,
+  "mpnet_primary_reembedding_max_abs_score_difference": 1.4901161193847656e-06,
+  "packages": {
+    "PyYAML": "6.0.3",
+    "huggingface-hub": "0.36.2",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1",
+    "sentence-transformers": "5.7.0",
+    "torch": "2.13.0",
+    "transformers": "4.57.6"
+  },
+  "primary_anchor_reused": true,
+  "primary_neural": {
+    "model_id": "sentence-transformers/all-mpnet-base-v2",
+    "model_max_seq_length": 384,
+    "requested_revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+    "resolved_revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130"
+  },
+  "sensitivity_neural": {
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_max_seq_length": 256,
+    "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+  },
+  "status": "PROMPT8_SEMANTIC_SENSITIVITIES_EXECUTED",
+  "truncation_profiles": {
+    "MINILM": {
+      "query_primary": {
+        "count": 2369,
+        "max_untruncated_wordpieces": 42,
+        "model_max_seq_length": 256,
+        "truncated_if_native_limit_applied": 0
+      },
+      "req_primary": {
+        "count": 21,
+        "max_untruncated_wordpieces": 129,
+        "model_max_seq_length": 256,
+        "truncated_if_native_limit_applied": 0
+      }
+    },
+    "MPNET": {
+      "query_class_method": {
+        "count": 2369,
+        "max_untruncated_wordpieces": 17,
+        "model_max_seq_length": 384,
+        "truncated_if_native_limit_applied": 0
+      },
+      "query_include_off_scaffold": {
+        "count": 2393,
+        "max_untruncated_wordpieces": 42,
+        "model_max_seq_length": 384,
+        "truncated_if_native_limit_applied": 0
+      },
+      "query_method_only": {
+        "count": 2369,
+        "max_untruncated_wordpieces": 12,
+        "model_max_seq_length": 384,
+        "truncated_if_native_limit_applied": 0
+      },
+      "query_primary": {
+        "count": 2369,
+        "max_untruncated_wordpieces": 42,
+        "model_max_seq_length": 384,
+        "truncated_if_native_limit_applied": 0
+      },
+      "query_raw_rows": {
+        "count": 2384,
+        "max_untruncated_wordpieces": 42,
+        "model_max_seq_length": 384,
+        "truncated_if_native_limit_applied": 0
+      },
+      "req_primary": {
+        "count": 21,
+        "max_untruncated_wordpieces": 129,
+        "model_max_seq_length": 384,
+        "truncated_if_native_limit_applied": 0
+      },
+      "req_title_description": {
+        "count": 21,
+        "max_untruncated_wordpieces": 36,
+        "model_max_seq_length": 384,
+        "truncated_if_native_limit_applied": 0
+      },
+      "req_with_extensions": {
+        "count": 21,
+        "max_untruncated_wordpieces": 252,
+        "model_max_seq_length": 384,
+        "truncated_if_native_limit_applied": 0
+      }
+    }
+  }
+}

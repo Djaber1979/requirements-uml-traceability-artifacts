@@ -1,0 +1,64 @@
+{
+  "execution_scope": {
+    "cross_method_primary_consensus_executed": true,
+    "minilm_sensitivity_executed": false,
+    "negative_control_executed": false,
+    "primary_mpnet_executed": true,
+    "primary_tfidf_executed": true,
+    "rq3_fragmentation_executed": false,
+    "run_resampling_executed": false
+  },
+  "input_hashes": {
+    "clean_behaviors_sha256": "c7450a80321fcd19bf28bacbe61c19495f12e533d9500ad926e2f0212ccdd2c6",
+    "preprocessing_config_sha256": "c361dc692a413f384e3a1d4cf721cdc82f8bede466ac878613030da071e0ed63",
+    "retrieval_config_sha256": "8595050cc99097fb82537e3cc8d0fab1817c92e3d054bddcd08b588f6b1cbeab",
+    "scaffold_sha256": "0468bb184ef559825883f666f7c0219c0d0fc3cadaaeb5474e056201edf28e2f",
+    "semantic_models_config_sha256": "e5997cb8df61bcd8e2ee3322ed0c93195af6e62e04d84b71399b98d0081bbbb1",
+    "ucs_sha256": "08826387eb7f351a0fcb14d86cef31765a8582b5bbc02e3a61ada604e2259148"
+  },
+  "packages": {
+    "PyYAML": "6.0.3",
+    "huggingface-hub": "0.36.2",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1",
+    "sentence-transformers": "5.7.0",
+    "torch": "2.13.0",
+    "transformers": "4.57.6"
+  },
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "primary_neural": {
+    "device": "cpu",
+    "model_id": "sentence-transformers/all-mpnet-base-v2",
+    "model_max_seq_length": 384,
+    "normalize_embeddings": true,
+    "query_token_profile": {
+      "count": 2369,
+      "max_untruncated_wordpieces": 42,
+      "model_max_seq_length": 384,
+      "truncated_if_native_limit_applied": 0
+    },
+    "requested_revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+    "requirement_token_profile": {
+      "count": 21,
+      "max_untruncated_wordpieces": 129,
+      "model_max_seq_length": 384,
+      "truncated_if_native_limit_applied": 0
+    },
+    "resolved_revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130"
+  },
+  "prompt3_merge_commit": "4feddb466b7843af9e872cc44d88aa8d76efccbc",
+  "python": "3.11.15 (main, Jun 16 2026, 21:41:52) [GCC 13.3.0]",
+  "status": "PROMPT4_RUNTIME_MANIFEST",
+  "tfidf": {
+    "query_matrix_shape": [
+      2369,
+      1027
+    ],
+    "requirement_matrix_shape": [
+      21,
+      1027
+    ],
+    "vocabulary_size": 1027
+  }
+}

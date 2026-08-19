@@ -1,0 +1,11 @@
+prohibited_analytical_fields:
+  - Best_Match_Action
+  - SimilarityScore
+reason: >-
+  Legacy automatic semantic matching fields from the source study are excluded
+  to ensure that all semantic evidence in the new study is independently recomputed.
+allowed_locations:
+  - input_snapshot/raw/Annotation_and_Mapping_Combined.csv
+  - config/excluded_fields.yaml
+  - documentation explicitly describing exclusion
+  - tests enforcing exclusion

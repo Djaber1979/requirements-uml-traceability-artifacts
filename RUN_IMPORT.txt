@@ -1,1 +1,0 @@
-Trigger the corrected fail-closed artifact importer for the uploaded verified package.

@@ -1,0 +1,30 @@
+status: frozen
+frozen: true
+freeze_prompt: 3
+
+models:
+  - role: primary_neural
+    library: sentence-transformers
+    model_id: sentence-transformers/all-mpnet-base-v2
+    revision: e8c3b32edf5434bc2275fc9bab85f82640a19130
+    similarity: cosine
+    normalize_embeddings: true
+    expected_default_max_wordpieces: 384
+    revision_source: "Hugging Face model API observed before semantic execution"
+  - role: sensitivity_neural
+    library: sentence-transformers
+    model_id: sentence-transformers/all-MiniLM-L6-v2
+    revision: 1110a243fdf4706b3f48f1d95db1a4f5529b4d41
+    similarity: cosine
+    normalize_embeddings: true
+    expected_default_max_wordpieces: 256
+    revision_source: "Hugging Face model API observed before semantic execution"
+
+execution_rules:
+  exact_revision_required: true
+  silent_revision_substitution_forbidden: true
+  record_resolved_revision: true
+  record_token_length_and_truncation_counts: true
+  model_selection_from_outcomes_forbidden: true
+
+note: "Model IDs and immutable revisions were fixed in Prompt 3 before semantic outcome computation."

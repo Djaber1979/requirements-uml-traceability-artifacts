@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use these study artifacts, please cite the accompanying study/article."
+title: "Structural and Semantic Concordance of Requirements-to-UML Traceability in LLM-Generated Behavioral Models"
+type: dataset
+authors:
+  - family-names: ROUABHIA
+    given-names: Djaber
+    orcid: "https://orcid.org/0000-0002-9805-3017"
+  - family-names: HADJADJ
+    given-names: Ismail
+    orcid: "https://orcid.org/0000-0002-0854-0808"
+  - family-names: AOUIN
+    given-names: Mohamed
+institution: "Echahid Cheikh Larbi Tebessi University, Tebessa, Algeria"
+date-released: 2026-08-19
+version: "1.0.0"
+license: MIT

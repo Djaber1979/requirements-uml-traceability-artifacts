@@ -1,0 +1,39 @@
+{
+  "transformation": "drop prohibited legacy semantic columns only",
+  "raw_path": "input_snapshot/raw/Annotation_and_Mapping_Combined.csv",
+  "clean_path": "derived/behaviors/source_without_legacy_semantics.csv",
+  "raw_sha256": "74260a5b5f31e80208f5f9f0ac38b85106c34e1012c10b2a9857ff8fb6ecdab5",
+  "clean_sha256": "c7450a80321fcd19bf28bacbe61c19495f12e533d9500ad926e2f0212ccdd2c6",
+  "raw_row_count": 3373,
+  "clean_row_count": 3373,
+  "raw_columns": [
+    "Model",
+    "Run",
+    "File",
+    "Class",
+    "MethodName",
+    "Signature",
+    "Has_UC_Annotation",
+    "UC_References",
+    "UC_Action",
+    "Best_Match_Action",
+    "SimilarityScore"
+  ],
+  "clean_columns": [
+    "Model",
+    "Run",
+    "File",
+    "Class",
+    "MethodName",
+    "Signature",
+    "Has_UC_Annotation",
+    "UC_References",
+    "UC_Action"
+  ],
+  "dropped_columns": [
+    "Best_Match_Action",
+    "SimilarityScore"
+  ],
+  "row_order_preserved": true,
+  "retained_values_verified_exact": true
+}
