@@ -32,8 +32,17 @@ jobs:
           rm -rf /tmp/clean-artifacts
           mkdir -p /tmp/clean-artifacts
           unzip -q requirements-uml-traceability-artifacts.zip -d /tmp/clean-artifacts
-          src=/tmp/clean-artifacts/requirements-uml-traceability-artifacts
-          test -d "$src"
+          # The verified release archive is flat at ZIP root. A single legacy
+          # wrapper directory is also accepted defensively, but no other shape.
+          if test -f /tmp/clean-artifacts/README.md; then
+            src=/tmp/clean-artifacts
+          elif test -f /tmp/clean-artifacts/requirements-uml-traceability-artifacts/README.md; then
+            src=/tmp/clean-artifacts/requirements-uml-traceability-artifacts
+          else
+            echo 'Unexpected archive layout' >&2
+            find /tmp/clean-artifacts -maxdepth 2 -type f | head -50 >&2
+            exit 1
+          fi
           cp -a "$src"/. .
           rm -f requirements-uml-traceability-artifacts.zip RUN_IMPORT.txt
 
