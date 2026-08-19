@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'requirements-uml-traceability-artifacts.zip'
+      - 'RUN_IMPORT.txt'
   workflow_dispatch:
 
 permissions:
@@ -34,7 +35,7 @@ jobs:
           src=/tmp/clean-artifacts/requirements-uml-traceability-artifacts
           test -d "$src"
           cp -a "$src"/. .
-          rm -f requirements-uml-traceability-artifacts.zip
+          rm -f requirements-uml-traceability-artifacts.zip RUN_IMPORT.txt
 
       - name: Fail-closed publication and provenance audit
         shell: bash
@@ -47,6 +48,7 @@ jobs:
           test ! -e reports
           test ! -e manuscript_support
           test ! -e input_snapshot/raw
+          test ! -e RUN_IMPORT.txt
           test -f derived/behaviors/source_without_legacy_semantics.csv
           test -f derived/behaviors/primary_semantic_queries.csv
           test -f HISTORICAL_SOURCE_PROVENANCE.md
